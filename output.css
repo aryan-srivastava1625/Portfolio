@@ -584,6 +584,18 @@
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
+  .top-1 {
+    top: calc(var(--spacing) * 1);
+  }
+  .top-1\/2 {
+    top: calc(1/2 * 100%);
+  }
+  .-right-6 {
+    right: calc(var(--spacing) * -6);
+  }
+  .-right-7 {
+    right: calc(var(--spacing) * -7);
+  }
   .right-8 {
     right: calc(var(--spacing) * 8);
   }
@@ -731,6 +743,12 @@
   .mr-8 {
     margin-right: calc(var(--spacing) * 8);
   }
+  .mr-10 {
+    margin-right: calc(var(--spacing) * 10);
+  }
+  .mr-16 {
+    margin-right: calc(var(--spacing) * 16);
+  }
   .mb-8 {
     margin-bottom: calc(var(--spacing) * 8);
   }
@@ -853,6 +871,9 @@
   }
   .w-7 {
     width: calc(var(--spacing) * 7);
+  }
+  .w-\[300px\] {
+    width: 300px;
   }
   .w-\[400px\] {
     width: 400px;
@@ -995,6 +1016,10 @@
   }
   .-translate-y-1\/4 {
     --tw-translate-y: calc(calc(1/4 * 100%) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .-translate-y-\[180px\] {
+    --tw-translate-y: calc(180px * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .translate-x-1 {
@@ -1840,6 +1865,9 @@
   .text-\[32px\] {
     font-size: 32px;
   }
+  .text-\[48px\] {
+    font-size: 48px;
+  }
   .text-\[64px\] {
     font-size: 64px;
   }
@@ -2224,6 +2252,14 @@
   .transition-normal {
     transition-behavior: normal;
   }
+  .duration-100 {
+    --tw-duration: 100ms;
+    transition-duration: 100ms;
+  }
+  .duration-200 {
+    --tw-duration: 200ms;
+    transition-duration: 200ms;
+  }
   .ease-in {
     --tw-ease: var(--ease-in);
     transition-timing-function: var(--ease-in);
@@ -2385,11 +2421,50 @@
   .transform-view {
     transform-box: view-box;
   }
+  .group-hover\:-right-8 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        right: calc(var(--spacing) * -8);
+      }
+    }
+  }
+  .group-hover\:-right-9 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        right: calc(var(--spacing) * -9);
+      }
+    }
+  }
+  .hover\:scale-110 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-scale-x: 110%;
+        --tw-scale-y: 110%;
+        --tw-scale-z: 110%;
+        scale: var(--tw-scale-x) var(--tw-scale-y);
+      }
+    }
+  }
   .hover\:text-white {
     &:hover {
       @media (hover: hover) {
         color: var(--color-white);
       }
+    }
+  }
+  .sm\:w-\[400px\] {
+    @media (width >= 40rem) {
+      width: 400px;
+    }
+  }
+  .md\:my-8 {
+    @media (width >= 48rem) {
+      margin-block: calc(var(--spacing) * 8);
+    }
+  }
+  .md\:ml-16 {
+    @media (width >= 48rem) {
+      margin-left: calc(var(--spacing) * 16);
     }
   }
   .md\:w-\[400px\] {
@@ -2400,6 +2475,12 @@
   .md\:w-\[650px\] {
     @media (width >= 48rem) {
       width: 650px;
+    }
+  }
+  .md\:text-6xl {
+    @media (width >= 48rem) {
+      font-size: var(--text-6xl);
+      line-height: var(--tw-leading, var(--text-6xl--line-height));
     }
   }
   .md\:text-\[64px\] {
@@ -2737,6 +2818,10 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-ease {
   syntax: "*";
   inherits: false;
@@ -2754,10 +2839,6 @@
   inherits: false;
 }
 @property --tw-contain-style {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-duration {
   syntax: "*";
   inherits: false;
 }
