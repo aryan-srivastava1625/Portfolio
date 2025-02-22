@@ -1634,11 +1634,17 @@
     --tw-border-style: solid;
     border-style: solid;
   }
+  .border-black {
+    border-color: var(--color-black);
+  }
   .bg-\(--my_variable\) {
     background-color: var(--my_variable);
   }
   .bg-\(color\:--my-color\) {
     background-color: var(--my-color);
+  }
+  .bg-\[\#2B2B2B\] {
+    background-color: #2B2B2B;
   }
   .bg-\[\#0088cc\] {
     background-color: #0088cc;
@@ -1651,6 +1657,12 @@
   }
   .bg-\[\#4595eb\] {
     background-color: #4595eb;
+  }
+  .bg-\[\#161616\] {
+    background-color: #161616;
+  }
+  .bg-\[\#252525\] {
+    background-color: #252525;
   }
   .bg-\[color\:var\(--my-color\)\] {
     background-color: var(--my-color);
@@ -1669,6 +1681,9 @@
   }
   .bg-gray-100 {
     background-color: var(--color-gray-100);
+  }
+  .bg-gray-800 {
+    background-color: var(--color-gray-800);
   }
   .bg-gray-900 {
     background-color: var(--color-gray-900);
